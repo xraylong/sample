@@ -13,6 +13,7 @@ $school_key = 1;
 if (isset($_GET['school_key'])) {
     $school_key = $_GET['school_key'];
 }
+$school_key = (int)$school_key;
 
 $query = "SELECT * FROM student WHERE school_key = " . $school_key . ";";
 var_dump($query);
